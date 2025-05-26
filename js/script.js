@@ -188,6 +188,19 @@ function criarCardProduto(produto) {
         } else {
             icon.classList.remove('fas');
             icon.classList.add('far');
+
+            // Adicionar imagem do produto
+const productImage = card.querySelector('.product-image');
+const placeholder = productImage.querySelector('.product-image-placeholder');
+if (placeholder) {
+    // Criar elemento de imagem
+    const img = document.createElement('img');
+    img.src = produto.imagem;
+    img.alt = produto.nome;
+    img.className = 'product-img';
+    
+    // Substituir placeholder pela imagem
+    productImage.replaceChild(img, placeholder);
         }
     });
     
