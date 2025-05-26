@@ -284,7 +284,7 @@ function enviarParaWhatsApp() {
     mensagem += `*Total do pedido: R$ ${total.toFixed(2)}*`;
     
     // Número de WhatsApp da loja (substituir pelo número real)
-    const numeroWhatsApp = '551980506578';
+    const numeroWhatsApp = '5551980506578';
     
     // Codificar mensagem para URL
     const mensagemCodificada = encodeURIComponent(mensagem);
