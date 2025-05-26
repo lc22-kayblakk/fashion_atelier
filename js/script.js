@@ -1,40 +1,40 @@
 // Dados dos produtos por categoria
 const produtosPorCategoria = {
     vestidos: [
-        { id: 1, nome: 'Vestido Longo Floral', preco: 189.90, imagem: '/images/vestido-longo.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 2, nome: 'Vestido Midi Elegante', preco: 159.90, imagem: '/images/vestido-midi.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 3, nome: 'Vestido Curto Casual', preco: 129.90, imagem: '/images/vestido-curto.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 4, nome: 'Vestido Festa Premium', preco: 249.90, imagem: '/images/vestido-festa.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 1, nome: 'Vestido Longo Floral', preco: 189.90, imagem: 'images/vestido-longo.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 2, nome: 'Vestido Midi Elegante', preco: 159.90, imagem: 'images/vestido-midi.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 3, nome: 'Vestido Curto Casual', preco: 129.90, imagem: 'images/vestido-curto.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 4, nome: 'Vestido Festa Premium', preco: 249.90, imagem: 'images/vestido-festa.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
     blusas: [
-        { id: 5, nome: 'Blusa Manga Bufante', preco: 89.90, imagem: '/images/blusa-bufante.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 6, nome: 'Blusa Cropped Moderna', preco: 69.90, imagem: '/images/blusa-cropped.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 7, nome: 'Camisa Social Feminina', preco: 119.90, imagem: '/images/camisa-social.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 8, nome: 'Blusa Ombro a Ombro', preco: 79.90, imagem: '/images/blusa-ombro.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 5, nome: 'Blusa Manga Bufante', preco: 89.90, imagem: 'images/blusa-bufante.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 6, nome: 'Blusa Cropped Moderna', preco: 69.90, imagem: 'images/blusa-cropped.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 7, nome: 'Camisa Social Feminina', preco: 119.90, imagem: 'images/camisa-social.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 8, nome: 'Blusa Ombro a Ombro', preco: 79.90, imagem: 'images/blusa-ombro.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
     calcas: [
-        { id: 9, nome: 'Calça Jeans Skinny', preco: 149.90, imagem: '/images/calca-skinny.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 10, nome: 'Calça Pantalona', preco: 159.90, imagem: '/images/calca-pantalona.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 11, nome: 'Calça Alfaiataria', preco: 179.90, imagem: '/images/calca-alfaiataria.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 12, nome: 'Calça Legging Premium', preco: 99.90, imagem: '/images/calca-legging.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 9, nome: 'Calça Jeans Skinny', preco: 149.90, imagem: 'images/calca-skinny.jpg', tamanhos: ['36', '38', '40', '42'] },
+        { id: 10, nome: 'Calça Pantalona', preco: 159.90, imagem: 'images/calca-pantalona.jpg', tamanhos: ['36', '38', '40', '42'] },
+        { id: 11, nome: 'Calça Alfaiataria', preco: 179.90, imagem: 'images/calca-alfaiataria.jpg', tamanhos: ['36', '38', '40', '42'] },
+        { id: 12, nome: 'Calça Legging Premium', preco: 99.90, imagem: 'images/calca-legging.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
     saias: [
-        { id: 13, nome: 'Saia Midi Plissada', preco: 119.90, imagem: '/images/saia-plissada.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 14, nome: 'Saia Longa Estampada', preco: 139.90, imagem: '/images/saia-longa.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 15, nome: 'Saia Jeans Curta', preco: 99.90, imagem: '/images/saia-jeans.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 16, nome: 'Saia Envelope', preco: 109.90, imagem: '/images/saia-envelope.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 13, nome: 'Saia Midi Plissada', preco: 119.90, imagem: 'images/saia-plissada.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 14, nome: 'Saia Longa Estampada', preco: 139.90, imagem: 'images/saia-longa.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 15, nome: 'Saia Jeans Curta', preco: 99.90, imagem: 'images/saia-jeans.jpg', tamanhos: ['36', '38', '40', '42'] },
+        { id: 16, nome: 'Saia Envelope', preco: 109.90, imagem: 'images/saia-envelope.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
     conjuntos: [
-        { id: 17, nome: 'Conjunto Blazer e Calça', preco: 299.90, imagem: '/images/conjunto-blazer.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 18, nome: 'Conjunto Top e Saia', preco: 189.90, imagem: '/images/conjunto-top.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 19, nome: 'Conjunto Moletom Elegante', preco: 219.90, imagem: '/images/conjunto-moletom.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 20, nome: 'Conjunto Alfaiataria', preco: 259.90, imagem: '/images/conjunto-alfaiataria.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 17, nome: 'Conjunto Blazer e Calça', preco: 299.90, imagem: 'images/conjunto-blazer.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 18, nome: 'Conjunto Top e Saia', preco: 189.90, imagem: 'images/conjunto-top.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 19, nome: 'Conjunto Moletom Elegante', preco: 219.90, imagem: 'images/conjunto-moletom.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 20, nome: 'Conjunto Alfaiataria', preco: 259.90, imagem: 'images/conjunto-alfaiataria.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
     acessorios: [
-        { id: 21, nome: 'Bolsa Estruturada', preco: 159.90, imagem: '/images/bolsa-estruturada.jpg', tamanhos: ['Único'] },
-        { id: 22, nome: 'Colar Elegante', preco: 79.90, imagem: '/images/colar.jpg', tamanhos: ['Único'] },
-        { id: 23, nome: 'Lenço de Seda', preco: 69.90, imagem: '/images/lenco.jpg', tamanhos: ['Único'] },
-        { id: 24, nome: 'Cinto Fino Feminino', preco: 59.90, imagem: '/images/cinto.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 21, nome: 'Bolsa Estruturada', preco: 159.90, imagem: 'images/bolsa-estruturada.jpg', tamanhos: ['Único'] },
+        { id: 22, nome: 'Colar Elegante', preco: 79.90, imagem: 'images/colar.jpg', tamanhos: ['Único'] },
+        { id: 23, nome: 'Lenço de Seda', preco: 69.90, imagem: 'images/lenco.jpg', tamanhos: ['Único'] },
+        { id: 24, nome: 'Cinto Fino Feminino', preco: 59.90, imagem: 'images/cinto.jpg', tamanhos: ['P', 'M', 'G'] },
     ],
 };
 
@@ -136,25 +136,26 @@ function carregarProdutos(categoria) {
 
 // Criar card de produto
 function criarCardProduto(produto) {
-    // Adicionar imagem do produto
-const productImage = card.querySelector('.product-image');
-const placeholder = productImage.querySelector('.product-image-placeholder');
-if (placeholder) {
-    // Criar elemento de imagem
-    const img = document.createElement('img');
-    img.src = produto.imagem;
-    img.alt = produto.nome;
-    img.className = 'product-img';
-    
-    // Substituir placeholder pela imagem
-    productImage.replaceChild(img, placeholder);
-}
     // Clonar template
     const card = productTemplate.content.cloneNode(true);
     
     // Preencher dados do produto
     card.querySelector('.product-name').textContent = produto.nome;
     card.querySelector('.product-price').textContent = `R$ ${produto.preco.toFixed(2)}`;
+    
+    // Adicionar imagem do produto
+    const productImage = card.querySelector('.product-image');
+    const placeholder = productImage.querySelector('.product-image-placeholder');
+    if (placeholder) {
+        // Criar elemento de imagem
+        const img = document.createElement('img');
+        img.src = produto.imagem;
+        img.alt = produto.nome;
+        img.className = 'product-img';
+        
+        // Substituir placeholder pela imagem
+        productImage.replaceChild(img, placeholder);
+    }
     
     // Adicionar tamanhos
     const sizesContainer = card.querySelector('.sizes-buttons');
@@ -201,7 +202,6 @@ if (placeholder) {
         } else {
             icon.classList.remove('fas');
             icon.classList.add('far');
-
         }
     });
     
@@ -298,7 +298,7 @@ function enviarParaWhatsApp() {
     mensagem += `*Total do pedido: R$ ${total.toFixed(2)}*`;
     
     // Número de WhatsApp da loja (substituir pelo número real)
-    const numeroWhatsApp = '5551980506578';
+    const numeroWhatsApp = '5511999999999';
     
     // Codificar mensagem para URL
     const mensagemCodificada = encodeURIComponent(mensagem);
@@ -341,6 +341,15 @@ style.textContent = `
             transform: translate(-50%, 0);
             opacity: 1;
         }
+    }
+    
+    .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 `;
 document.head.appendChild(style);
