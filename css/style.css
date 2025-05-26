@@ -585,3 +585,11 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary);
 }
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
