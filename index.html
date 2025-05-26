@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Atelier - Moda Feminina</title>
+    <meta name="description" content="Loja de roupas femininas com estilo e elegância para todas as ocasiões.">
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logo-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Fashion Atelier - Moda Feminina" class="logo-image">
+                </div>
+                
+                <!-- Menu para desktop -->
+                <nav class="menu-desktop">
+                    <ul class="categories">
+                        <li><a href="#" class="category-link active" data-category="vestidos">Vestidos</a></li>
+                        <li><a href="#" class="category-link" data-category="blusas">Blusas</a></li>
+                        <li><a href="#" class="category-link" data-category="calcas">Calças</a></li>
+                        <li><a href="#" class="category-link" data-category="saias">Saias</a></li>
+                        <li><a href="#" class="category-link" data-category="conjuntos">Conjuntos</a></li>
+                        <li><a href="#" class="category-link" data-category="acessorios">Acessórios</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Ícones -->
+                <div class="header-icons">
+                    <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+                    <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+                    <a href="#" class="icon-link cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                    
+                    <!-- Botão do menu mobile -->
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menu mobile -->
+            <nav class="menu-mobile" id="menu-mobile">
+                <ul class="categories-mobile">
+                    <li><a href="#" class="category-link active" data-category="vestidos">Vestidos</a></li>
+                    <li><a href="#" class="category-link" data-category="blusas">Blusas</a></li>
+                    <li><a href="#" class="category-link" data-category="calcas">Calças</a></li>
+                    <li><a href="#" class="category-link" data-category="saias">Saias</a></li>
+                    <li><a href="#" class="category-link" data-category="conjuntos">Conjuntos</a></li>
+                    <li><a href="#" class="category-link" data-category="acessorios">Acessórios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Título da categoria -->
+            <h2 class="category-title" id="category-title">Vestidos</h2>
+            
+            <!-- Grid de produtos -->
+            <div class="products-grid" id="products-grid">
+                <!-- Os produtos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Botão flutuante do carrinho -->
+    <div class="floating-cart" id="floating-cart">
+        <button class="whatsapp-button" id="whatsapp-button">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Finalizar Pedido (<span id="cart-total">0</span>)</span>
+        </button>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="images/logo.jpg" alt="Fashion Atelier" class="footer-logo">
+                    <p class="footer-text">
+                        Sua loja de roupas femininas com estilo e elegância para todas as ocasiões.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-subtitle">Categorias</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link" data-category="vestidos">Vestidos</a></li>
+                        <li><a href="#" class="footer-link" data-category="blusas">Blusas</a></li>
+                        <li><a href="#" class="footer-link" data-category="calcas">Calças</a></li>
+                        <li><a href="#" class="footer-link" data-category="saias">Saias</a></li>
+                        <li><a href="#" class="footer-link" data-category="conjuntos">Conjuntos</a></li>
+                        <li><a href="#" class="footer-link" data-category="acessorios">Acessórios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: (11) 99999-9999</li>
+                        <li><i class="far fa-envelope"></i> Email: contato@boutiqueelegance.com.br</li>
+                        <li><i class="fab fa-instagram"></i> Instagram: @boutiqueelegance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Boutique Elegance. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Template para o card de produto -->
+    <template id="product-template">
+        <div class="product-card">
+            <div class="product-image">
+                <div class="product-image-placeholder">Imagem do Produto</div>
+                <button class="wishlist-button">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="product-info">
+                <h3 class="product-name"></h3>
+                <p class="product-price"></p>
+                
+                <div class="product-sizes">
+                    <p class="sizes-label">Tamanho:</p>
+                    <div class="sizes-buttons">
+                        <!-- Os tamanhos serão inseridos aqui via JavaScript -->
+                    </div>
+                </div>
+                
+                <button class="add-to-cart-button">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </template>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

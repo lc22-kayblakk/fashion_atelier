@@ -1,0 +1,12 @@
+.logo-image {
+    max-height: 80px;
+    border-radius: var(--radius-full);
+}
+
+.footer-logo {
+    max-height: 60px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-white);
+    padding: var(--spacing-xs);
+}
