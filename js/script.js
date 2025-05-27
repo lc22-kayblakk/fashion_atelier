@@ -8,7 +8,7 @@ const produtosPorCategoria = {
     ],
     calcas: [
         { id: 3, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'], cores: ['Preto'] },
-        { id: 4, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Bege'] },
+        { id: 4, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calça-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Bege'] },
         { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['P', 'M', 'G'], cores: ['Preto'] }
     ],
     body: [
@@ -268,7 +268,7 @@ function getColorCode(corNome) {
         'Amarelo': '#FFFF00',
         'Roxo': '#800080',
         'Cinza': '#808080',
-        'Marrom': '#A52A2A',
+        'Marrom': '#964B00',
         'Bege': '#F5F5DC',
         'Dourado': '#FFD700',
         'Prata': '#C0C0C0',
