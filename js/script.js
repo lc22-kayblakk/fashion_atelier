@@ -1,12 +1,12 @@
 // Dados dos produtos por categoria
 const produtosPorCategoria = {
-    vestidos: [
+    Vestidos: [
         { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. único'] },
     ],
-    blusas: [
+    Blusas: [
         { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. único'] } cores: ['Rosa claro', 'Rosa forte'] ,
     ],
-    calcas: [
+    Calcas: [
         { id: 3, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. único'] },
         { id: 4, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'] },
         { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['Tam. único'] },
@@ -17,7 +17,7 @@ const produtosPorCategoria = {
     Jaquetas: [
         { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'] },
     ],
-     Meias: [
+    Meias: [
         { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'] },
     ],
 };
