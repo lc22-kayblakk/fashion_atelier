@@ -1,25 +1,25 @@
 // Dados dos produtos por categoria
 const produtosPorCategoria = {
     vestidos: [
-        { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. Único'], cores: ['Marom'] },
+        { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. Único'], cores: ['Marrom'] }
     ],
     blusas: [
-        { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa claro', 'Rosa forte'] },
+        { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa Claro', 'Rosa Forte'] }
     ],
     calcas: [
         { id: 3, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'], cores: ['Preto'] },
         { id: 4, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Bege'] },
-        { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['P', 'M', 'G'], cores: ['Preto'] },
+        { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['P', 'M', 'G'], cores: ['Preto'] }
     ],
     body: [
-        { id: 6, nome: 'Body Fivela', preco: 89.99, imagem: 'images/body-fivela.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', ´Branco´, ´Bege´] },
+        { id: 6, nome: 'Body Fivela', preco: 89.99, imagem: 'images/body-fivela.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', 'Branco', 'Bege'] }
     ],
     jaquetas: [
-        { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa claro / bebê'] },
+        { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa Claro / Bebê'] }
     ],
     meias: [
         { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', 'Bege'] }
-    ],
+    ]
 };
 
 // Variáveis globais
@@ -257,6 +257,9 @@ function getColorCode(corNome) {
         'Preto': '#000000',
         'Branco': '#FFFFFF',
         'Rosa': '#FFC0CB',
+        'Rosa Claro': '#FFCCE6',
+        'Rosa Forte': '#FF1493',
+        'Rosa Claro / Bebê': '#FFC0CB',
         'Azul': '#0000FF',
         'Azul Claro': '#ADD8E6',
         'Azul Escuro': '#00008B',
