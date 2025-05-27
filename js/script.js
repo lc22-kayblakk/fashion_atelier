@@ -1,40 +1,24 @@
 // Dados dos produtos por categoria
 const produtosPorCategoria = {
     vestidos: [
-        { id: 1, nome: 'Vestido Longo Floral', preco: 189.90, imagem: 'images/vestido-longo.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 2, nome: 'Vestido Midi Elegante', preco: 159.90, imagem: 'images/vestido-midi.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 3, nome: 'Vestido Curto Casual', preco: 129.90, imagem: 'images/vestido-curto.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 4, nome: 'Vestido Festa Premium', preco: 249.90, imagem: 'images/vestido-festa.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. único'] },
     ],
     blusas: [
-        { id: 5, nome: 'Blusa Manga Bufante', preco: 89.90, imagem: 'images/blusa-bufante.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 6, nome: 'Blusa Cropped Moderna', preco: 69.90, imagem: 'images/blusa-cropped.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 7, nome: 'Camisa Social Feminina', preco: 119.90, imagem: 'images/camisa-social.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 8, nome: 'Blusa Ombro a Ombro', preco: 79.90, imagem: 'images/blusa-ombro.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. único'] } cores: ['Rosa claro', 'Rosa forte'] ,
     ],
     calcas: [
-        { id: 9, nome: 'Calça Jeans Skinny', preco: 149.90, imagem: 'images/calca-skinny.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 10, nome: 'Calça Pantalona', preco: 159.90, imagem: 'images/calca-pantalona.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 11, nome: 'Calça Alfaiataria', preco: 179.90, imagem: 'images/calca-alfaiataria.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 12, nome: 'Calça Legging Premium', preco: 99.90, imagem: 'images/calca-legging.jpg', tamanhos: ['P', 'M', 'G'] },
+        { id: 3, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. único'] },
+        { id: 4, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'] },
+        { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['Tam. único'] },
     ],
-    saias: [
-        { id: 13, nome: 'Saia Midi Plissada', preco: 119.90, imagem: 'images/saia-plissada.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 14, nome: 'Saia Longa Estampada', preco: 139.90, imagem: 'images/saia-longa.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 15, nome: 'Saia Jeans Curta', preco: 99.90, imagem: 'images/saia-jeans.jpg', tamanhos: ['36', '38', '40', '42'] },
-        { id: 16, nome: 'Saia Envelope', preco: 109.90, imagem: 'images/saia-envelope.jpg', tamanhos: ['P', 'M', 'G'] },
+    Body: [
+        { id: 6, nome: 'Body Fivela', preco: 89.99, imagem: 'images/body-fivela.jpg', tamanhos: ['Tam. único'] cores: ['Bege', 'Branco', ´Preto´] },
     ],
-    conjuntos: [
-        { id: 17, nome: 'Conjunto Blazer e Calça', preco: 299.90, imagem: 'images/conjunto-blazer.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 18, nome: 'Conjunto Top e Saia', preco: 189.90, imagem: 'images/conjunto-top.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 19, nome: 'Conjunto Moletom Elegante', preco: 219.90, imagem: 'images/conjunto-moletom.jpg', tamanhos: ['P', 'M', 'G'] },
-        { id: 20, nome: 'Conjunto Alfaiataria', preco: 259.90, imagem: 'images/conjunto-alfaiataria.jpg', tamanhos: ['P', 'M', 'G'] },
+    Jaquetas: [
+        { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'] },
     ],
-    acessorios: [
-        { id: 21, nome: 'Bolsa Estruturada', preco: 159.90, imagem: 'images/bolsa-estruturada.jpg', tamanhos: ['Único'] },
-        { id: 22, nome: 'Colar Elegante', preco: 79.90, imagem: 'images/colar.jpg', tamanhos: ['Único'] },
-        { id: 23, nome: 'Lenço de Seda', preco: 69.90, imagem: 'images/lenco.jpg', tamanhos: ['Único'] },
-        { id: 24, nome: 'Cinto Fino Feminino', preco: 59.90, imagem: 'images/cinto.jpg', tamanhos: ['P', 'M', 'G'] },
+     Meias: [
+        { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'] },
     ],
 };
 
@@ -42,6 +26,7 @@ const produtosPorCategoria = {
 let categoriaAtiva = 'vestidos';
 let carrinho = [];
 let tamanhoSelecionado = {};
+let corSelecionada = {};
 
 // Elementos DOM
 const menuToggle = document.getElementById('menu-toggle');
@@ -136,6 +121,27 @@ function carregarProdutos(categoria) {
 
 // Criar card de produto
 function criarCardProduto(produto) {
+    // Função auxiliar para converter nomes de cores em códigos hexadecimais
+function getColorCode(corNome) {
+    const coresMap = {
+        'Preto': '#000000',
+        'Branco': '#FFFFFF',
+        'Rosa': '#FFC0CB',
+        'Azul': '#0000FF',
+        'Vermelho': '#FF0000',
+        'Verde': '#008000',
+        'Amarelo': '#FFFF00',
+        'Roxo': '#800080',
+        'Cinza': '#808080',
+        'Marrom': '#A52A2A',
+        'Bege': '#F5F5DC',
+        ´Rosa claro´: ´#FFB6C1´,
+        ´Rosa forte´: ´#FF0084´
+        // Adicione mais cores conforme necessário
+    };
+    
+    return coresMap[corNome] || '#CCCCCC'; // Cor padrão se não encontrar
+}
     // Clonar template
     const card = productTemplate.content.cloneNode(true);
     
@@ -183,6 +189,48 @@ function criarCardProduto(produto) {
         
         sizesContainer.appendChild(sizeButton);
     });
+
+    // Adicionar cores (após adicionar tamanhos)
+if (produto.cores && produto.cores.length > 0) {
+    const colorsContainer = card.querySelector('.colors-buttons');
+    
+    // Variável para armazenar a cor selecionada
+    if (!corSelecionada[produto.id]) {
+        corSelecionada[produto.id] = produto.cores[0]; // Seleciona a primeira cor por padrão
+    }
+    
+    produto.cores.forEach(cor => {
+        const colorButton = document.createElement('button');
+        colorButton.classList.add('color-button');
+        colorButton.setAttribute('data-color', cor);
+        
+        // Definir estilo do botão baseado na cor
+        colorButton.style.backgroundColor = getColorCode(cor);
+        
+        // Adicionar título para mostrar o nome da cor ao passar o mouse
+        colorButton.title = cor;
+        
+        // Adicionar classe 'selected' se for a cor selecionada
+        if (corSelecionada[produto.id] === cor) {
+            colorButton.classList.add('selected');
+        }
+        
+        colorButton.addEventListener('click', () => {
+            // Remover seleção anterior
+            colorsContainer.querySelectorAll('.color-button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            // Adicionar seleção atual
+            colorButton.classList.add('selected');
+            
+            // Salvar cor selecionada
+            corSelecionada[produto.id] = cor;
+        });
+        
+        colorsContainer.appendChild(colorButton);
+    });
+}
     
     // Configurar botão de adicionar ao carrinho
     const addButton = card.querySelector('.add-to-cart-button');
@@ -203,6 +251,38 @@ function criarCardProduto(produto) {
             icon.classList.remove('fas');
             icon.classList.add('far');
         }
+        .product-colors {
+    margin-bottom: var(--spacing-md);
+}
+
+.colors-label {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.colors-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.color-button.selected {
+    box-shadow: 0 0 0 2px var(--color-secondary);
+}
     });
     
     return card;
