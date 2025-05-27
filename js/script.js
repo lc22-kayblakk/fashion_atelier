@@ -1,24 +1,24 @@
 // Dados dos produtos por categoria
 const produtosPorCategoria = {
-    Vestidos: [
-        { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. único'] },
+    vestidos: [
+        { id: 1, nome: 'Vestido Modal', preco: 89.99, imagem: 'images/vestido-modal.jpg', tamanhos: ['Tam. Único'], cores: ['Marom'] },
     ],
-    Blusas: [
-        { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. único'] } cores: ['Rosa claro', 'Rosa forte'] ,
+    blusas: [
+        { id: 2, nome: 'Blusa Trico', preco: 104.99, imagem: 'images/blusa-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa claro', 'Rosa forte'] },
     ],
-    Calcas: [
-        { id: 3, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. único'] },
-        { id: 4, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'] },
-        { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['Tam. único'] },
+    calcas: [
+        { id: 3, nome: 'Calça Jeans Sal e Pimenta', preco: 149.99, imagem: 'images/calca-jeans-sal.jpg', tamanhos: ['38', '40'], cores: ['Preto'] },
+        { id: 4, nome: 'Calça Trico', preco: 159.99, imagem: 'images/calca-trico.jpg', tamanhos: ['Tam. Único'], cores: ['Bege'] },
+        { id: 5, nome: 'Calça Legging', preco: 34.99, imagem: 'images/legging-preta.jpg', tamanhos: ['P', 'M', 'G'], cores: ['Preto'] },
     ],
-    Body: [
-        { id: 6, nome: 'Body Fivela', preco: 89.99, imagem: 'images/body-fivela.jpg', tamanhos: ['Tam. único'] cores: ['Bege', 'Branco', ´Preto´] },
+    body: [
+        { id: 6, nome: 'Body Fivela', preco: 89.99, imagem: 'images/body-fivela.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', ´Branco´, ´Bege´] },
     ],
-    Jaquetas: [
-        { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'] },
+    jaquetas: [
+        { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa claro / bebê'] },
     ],
-    Meias: [
-        { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'] },
+    meias: [
+        { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', 'Bege'] },
     ],
 };
 
@@ -121,27 +121,6 @@ function carregarProdutos(categoria) {
 
 // Criar card de produto
 function criarCardProduto(produto) {
-    // Função auxiliar para converter nomes de cores em códigos hexadecimais
-function getColorCode(corNome) {
-    const coresMap = {
-        'Preto': '#000000',
-        'Branco': '#FFFFFF',
-        'Rosa': '#FFC0CB',
-        'Azul': '#0000FF',
-        'Vermelho': '#FF0000',
-        'Verde': '#008000',
-        'Amarelo': '#FFFF00',
-        'Roxo': '#800080',
-        'Cinza': '#808080',
-        'Marrom': '#A52A2A',
-        'Bege': '#F5F5DC',
-        ´Rosa claro´: ´#FFB6C1´,
-        ´Rosa forte´: ´#FF0084´
-        // Adicione mais cores conforme necessário
-    };
-    
-    return coresMap[corNome] || '#CCCCCC'; // Cor padrão se não encontrar
-}
     // Clonar template
     const card = productTemplate.content.cloneNode(true);
     
@@ -189,48 +168,64 @@ function getColorCode(corNome) {
         
         sizesContainer.appendChild(sizeButton);
     });
-
-    // Adicionar cores (após adicionar tamanhos)
-if (produto.cores && produto.cores.length > 0) {
-    const colorsContainer = card.querySelector('.colors-buttons');
     
-    // Variável para armazenar a cor selecionada
-    if (!corSelecionada[produto.id]) {
-        corSelecionada[produto.id] = produto.cores[0]; // Seleciona a primeira cor por padrão
-    }
-    
-    produto.cores.forEach(cor => {
-        const colorButton = document.createElement('button');
-        colorButton.classList.add('color-button');
-        colorButton.setAttribute('data-color', cor);
+    // Adicionar cores (se o produto tiver cores)
+    if (produto.cores && produto.cores.length > 0) {
+        // Criar container para cores se não existir no template
+        let colorsSection = document.createElement('div');
+        colorsSection.className = 'product-colors';
         
-        // Definir estilo do botão baseado na cor
-        colorButton.style.backgroundColor = getColorCode(cor);
+        let colorsLabel = document.createElement('p');
+        colorsLabel.className = 'colors-label';
+        colorsLabel.textContent = 'Cor:';
+        colorsSection.appendChild(colorsLabel);
         
-        // Adicionar título para mostrar o nome da cor ao passar o mouse
-        colorButton.title = cor;
+        let colorsContainer = document.createElement('div');
+        colorsContainer.className = 'colors-buttons';
+        colorsSection.appendChild(colorsContainer);
         
-        // Adicionar classe 'selected' se for a cor selecionada
-        if (corSelecionada[produto.id] === cor) {
-            colorButton.classList.add('selected');
+        // Inserir após os tamanhos
+        const productInfo = card.querySelector('.product-info');
+        const addButton = card.querySelector('.add-to-cart-button');
+        productInfo.insertBefore(colorsSection, addButton);
+        
+        // Variável para armazenar a cor selecionada
+        if (!corSelecionada[produto.id]) {
+            corSelecionada[produto.id] = produto.cores[0]; // Seleciona a primeira cor por padrão
         }
         
-        colorButton.addEventListener('click', () => {
-            // Remover seleção anterior
-            colorsContainer.querySelectorAll('.color-button').forEach(btn => {
-                btn.classList.remove('selected');
+        produto.cores.forEach(cor => {
+            const colorButton = document.createElement('button');
+            colorButton.classList.add('color-button');
+            colorButton.setAttribute('data-color', cor);
+            
+            // Definir estilo do botão baseado na cor
+            colorButton.style.backgroundColor = getColorCode(cor);
+            
+            // Adicionar título para mostrar o nome da cor ao passar o mouse
+            colorButton.title = cor;
+            
+            // Adicionar classe 'selected' se for a cor selecionada
+            if (corSelecionada[produto.id] === cor) {
+                colorButton.classList.add('selected');
+            }
+            
+            colorButton.addEventListener('click', () => {
+                // Remover seleção anterior
+                colorsContainer.querySelectorAll('.color-button').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+                
+                // Adicionar seleção atual
+                colorButton.classList.add('selected');
+                
+                // Salvar cor selecionada
+                corSelecionada[produto.id] = cor;
             });
             
-            // Adicionar seleção atual
-            colorButton.classList.add('selected');
-            
-            // Salvar cor selecionada
-            corSelecionada[produto.id] = cor;
+            colorsContainer.appendChild(colorButton);
         });
-        
-        colorsContainer.appendChild(colorButton);
-    });
-}
+    }
     
     // Configurar botão de adicionar ao carrinho
     const addButton = card.querySelector('.add-to-cart-button');
@@ -251,46 +246,43 @@ if (produto.cores && produto.cores.length > 0) {
             icon.classList.remove('fas');
             icon.classList.add('far');
         }
-        .product-colors {
-    margin-bottom: var(--spacing-md);
-}
-
-.colors-label {
-    font-size: 0.9rem;
-    color: var(--color-text);
-    margin-bottom: var(--spacing-sm);
-}
-
-.colors-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-}
-
-.color-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--color-border);
-    cursor: pointer;
-    transition: all var(--transition-normal);
-}
-
-.color-button:hover {
-    transform: scale(1.1);
-}
-
-.color-button.selected {
-    box-shadow: 0 0 0 2px var(--color-secondary);
-}
     });
     
     return card;
 }
 
+// Função auxiliar para converter nomes de cores em códigos hexadecimais
+function getColorCode(corNome) {
+    const coresMap = {
+        'Preto': '#000000',
+        'Branco': '#FFFFFF',
+        'Rosa': '#FFC0CB',
+        'Azul': '#0000FF',
+        'Azul Claro': '#ADD8E6',
+        'Azul Escuro': '#00008B',
+        'Vermelho': '#FF0000',
+        'Verde': '#008000',
+        'Amarelo': '#FFFF00',
+        'Roxo': '#800080',
+        'Cinza': '#808080',
+        'Marrom': '#A52A2A',
+        'Bege': '#F5F5DC',
+        'Dourado': '#FFD700',
+        'Prata': '#C0C0C0',
+        'Floral': '#FFCBDB',
+        'Listrada': '#DCDCDC',
+        'Estampado': '#E6E6FA',
+        'Liso': '#F0F8FF'
+        // Adicione mais cores conforme necessário
+    };
+    
+    return coresMap[corNome] || '#CCCCCC'; // Cor padrão se não encontrar
+}
+
 // Adicionar produto ao carrinho
 function adicionarAoCarrinho(produto) {
     const tamanho = tamanhoSelecionado[produto.id];
+    const cor = corSelecionada[produto.id];
     
     // Verificar se um tamanho foi selecionado
     if (!tamanho) {
@@ -298,9 +290,15 @@ function adicionarAoCarrinho(produto) {
         return;
     }
     
+    // Verificar se uma cor foi selecionada (se o produto tiver cores)
+    if (produto.cores && produto.cores.length > 0 && !cor) {
+        alert('Por favor, selecione uma cor');
+        return;
+    }
+    
     // Verificar se o produto já está no carrinho
     const itemExistente = carrinho.find(
-        item => item.id === produto.id && item.tamanho === tamanho
+        item => item.id === produto.id && item.tamanho === tamanho && item.cor === cor
     );
     
     if (itemExistente) {
@@ -311,6 +309,7 @@ function adicionarAoCarrinho(produto) {
         carrinho.push({
             ...produto,
             tamanho,
+            cor,
             quantidade: 1
         });
     }
@@ -365,6 +364,9 @@ function enviarParaWhatsApp() {
     carrinho.forEach(item => {
         mensagem += `*${item.nome}*\n`;
         mensagem += `Tamanho: ${item.tamanho}\n`;
+        if (item.cor) {
+            mensagem += `Cor: ${item.cor}\n`;
+        }
         mensagem += `Quantidade: ${item.quantidade}\n`;
         mensagem += `Preço unitário: R$ ${item.preco.toFixed(2)}\n`;
         mensagem += `Subtotal: R$ ${(item.preco * item.quantidade).toFixed(2)}\n\n`;
@@ -390,7 +392,7 @@ function enviarParaWhatsApp() {
     window.open(linkWhatsApp, '_blank');
 }
 
-// Adicionar estilos para mensagem de sucesso
+// Adicionar estilos para mensagem de sucesso e botões de cores
 const style = document.createElement('style');
 style.textContent = `
     .success-message {
@@ -430,6 +432,39 @@ style.textContent = `
         position: absolute;
         top: 0;
         left: 0;
+    }
+    
+    .product-colors {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .colors-label {
+        font-size: 0.9rem;
+        color: var(--color-text);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .colors-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .color-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+        transition: all var(--transition-normal);
+    }
+
+    .color-button:hover {
+        transform: scale(1.1);
+    }
+
+    .color-button.selected {
+        box-shadow: 0 0 0 2px var(--color-secondary);
     }
 `;
 document.head.appendChild(style);
