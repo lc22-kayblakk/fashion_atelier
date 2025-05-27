@@ -18,7 +18,7 @@ const produtosPorCategoria = {
         { id: 7, nome: 'Jaqueta jeans rosa bebê', preco: 149.99, imagem: 'images/jaqueta-jeans.jpg', tamanhos: ['Tam. Único'], cores: ['Rosa claro / bebê'] },
     ],
     meias: [
-        { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', 'Bege'] },
+        { id: 8, nome: 'Meia Térmica', preco: 19.99, imagem: 'images/meias-termicas.jpg', tamanhos: ['Tam. Único'], cores: ['Preto', 'Bege'] }
     ],
 };
 
